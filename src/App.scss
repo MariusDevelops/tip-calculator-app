@@ -1,0 +1,39 @@
+// Colors
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$dark-grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$ight-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+// - Font size (form inputs): 24px
+// - Weights: 400, 500, 700
+// font-family: 'Space Mono', monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light-grayish-cyan;
+  font-family: "Space Mono", monospace;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.wrapper {
+  background-color: $white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  padding: 20px;
+}
