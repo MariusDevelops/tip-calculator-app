@@ -35,7 +35,7 @@ function App() {
           <input type="number" className="input people-input" />
         </section>
 
-        <section className="result">
+        <section className="section2">
           <div className="tip-amount">
             <div className="text">
               <p>Tip Amount</p>

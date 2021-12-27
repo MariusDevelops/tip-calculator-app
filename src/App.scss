@@ -24,6 +24,11 @@ body {
   font-family: "Space Mono", monospace;
   height: 100vh;
   width: 100%;
+  @media (min-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -37,6 +42,19 @@ body {
   flex-direction: column;
   padding: 32px;
   border-radius: 20px 20px 0 0;
+  @media (min-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 720px;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 32px;
+    height: 520px;
+    margin-bottom: 50px;
+  }
+  @media (min-width: 1000px) {
+    max-width: 950px;
+  }
 }
 
 /////// LABELS AND INPUTS //////
@@ -59,25 +77,46 @@ input {
   color: $very-dark-cyan;
   font-weight: bolder;
   font-family: "Space Mono", monospace;
+  @media (min-width: 720px) {
+    padding: 9px;
+    background-position: 17px 18px;
+  }
 }
-
+///////////// SECTION ONE //////////
+.section1 {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 720px) {
+    margin-right: 40px;
+  }
+}
 ///////////// BILL /////////////
 .bill-input {
   background-image: url("../images/icon-dollar.svg");
 }
 
 .bill-input {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  @media (min-width: 720px) {
+    margin-bottom: 40px;
+  }
 }
 
 /////// TIP PERCENTS //////
 .tip {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 144px 144px;
+  grid-template-columns: 1fr 1fr;
   row-gap: 32px;
   column-gap: 18px;
   margin-bottom: 32px;
+  @media (min-width: 720px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 18px;
+    margin-bottom: 40px;
+  }
 }
 
 .tips {
@@ -90,6 +129,9 @@ input {
   font-size: 24px;
   border-radius: 4px;
   cursor: pointer;
+  @media (min-width: 720px) {
+    height: 55px;
+  }
 }
 
 .active-tip {
@@ -99,8 +141,13 @@ input {
 }
 
 #tip-custom input {
-  box-sizing: border-box;
   width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  @media (max-width: 300px) {
+    font-size: 20px;
+    height: 48px;
+  }
 }
 
 .error {
@@ -111,7 +158,8 @@ input {
 ///////////// PEOPLE INPUT /////////////
 .people-input {
   background-image: url("../images/icon-person.svg");
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .peopleLabel {
@@ -121,11 +169,27 @@ input {
 
 ////////// SECTION TWO ///////////
 //////////// RESULTS /////////////
-.result {
+.section2 {
   background-color: $very-dark-cyan;
   color: $white;
   padding: 40px 20px;
   border-radius: 15px;
+  @media (min-width: 720px) {
+    margin-left: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 48px 38px;
+  }
+  @media (min-width: 1000px) {
+    margin-left: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 48px 38px;
+  }
 }
 
 .tip-amount,
@@ -133,7 +197,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .person {
@@ -146,6 +210,12 @@ input {
   font-size: 28px;
   color: $strong-cyan;
   font-weight: 700;
+  // @media (min-width: 600px) {
+  //   font-size: 30px;
+  // }
+  @media (min-width: 1000px) {
+    font-size: 55px;
+  }
 }
 
 ///////// RESET BUTTON ///////////
@@ -158,4 +228,8 @@ input {
   padding: 10px 0 10px 0;
   border-radius: 5px;
   cursor: pointer;
+  @media (min-width: 720px) {
+    padding: 13px 0 13px 0;
+    margin-top: auto;
+  }
 }
