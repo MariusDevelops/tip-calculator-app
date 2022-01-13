@@ -69,6 +69,11 @@ body {
   }
 }
 
+button {
+  font-family: "Space Mono", monospace;
+  border: none;
+}
+
 label {
   color: #7f9c9f;
   font-weight: 700;
@@ -83,6 +88,7 @@ input {
   background-position: 17px 15px;
   background-repeat: no-repeat;
   background-color: #c5e4e7;
+  border-radius: 4px;
   text-align: right;
   font-size: 24px;
   color: #00494d;
@@ -95,6 +101,10 @@ input {
     padding: 9px;
     background-position: 17px 18px;
   }
+}
+
+input:focus {
+  border: solid 2px #26c0ab;
 }
 
 .section1 {
@@ -175,10 +185,29 @@ input {
   }
 }
 
-.active-tip {
+.active-tip:focus {
   color: #00494d;
   background-color: #26c0ab;
   font-weight: bolder;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 720px) {
+  .active-tip:focus {
+    height: 55px;
+  }
 }
 
 #tip-custom input {
@@ -196,7 +225,6 @@ input {
 
 .error {
   color: red;
-  display: none;
 }
 
 .people-input {
